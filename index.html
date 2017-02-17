@@ -137,6 +137,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-搭建属于自己博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/17/搭建属于自己博客/">搭建属于自己博客</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/17/搭建属于自己博客/" class="archive-article-date">
+  	<time datetime="2017-02-17T07:23:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每个人都有一个想写博客的梦想，想把自己日常生活中的点点滴滴分享出去给大家看，在这里可以使用github来搭建一个属于自己的博客。</p>
+<h4 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h4><p>在这里我参考的是<a href="http://www.jianshu.com/p/863f3f2d1733" target="_blank" rel="external">http://www.jianshu.com/p/863f3f2d1733</a><br>感谢作者的分享</p>
+<p>上述作者的文章写的已经很好了，根据这篇文章你能够很轻易的搭建自己的博客，但在实际搭建中，发现有一些地方需要注意。</p>
+<ol>
+<li>在文中需要生成ssh时，在cmd中输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>报错，提示不是内部或外部命令，这种情况一般是因为git的环境变量没有配置好造成的，你可以选择重新配置git的环境变量，或者手动去git的安装目录下Git\usr\bin运行指令即可，在win7环境下，ssh密钥会出现在你的用户名账号下，如C:\Users\Administrator\.ssh</p>
+<ol>
+<li>在修改配置文件时，一定要记住空格的位置，如name: Stride中:和Stride中间的空格不能省略否则会报错</li>
+</ol>
+<h4 id="如何配置"><a href="#如何配置" class="headerlink" title="如何配置"></a>如何配置</h4><p>因为文中使用的是Yilia主题，所以在实际使用中其实存在2个配置文件_config.yml一个位于根目录下，另一个位于\themes\yilia目录下。</p>
+<ol>
+<li>根目录下的_config.yml可以用来配置博客的title，作者，签名等。</li>
+<li>\themes\yilia目录下的_config.yml可以配置头像等设置。</li>
+</ol>
+<h5 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h5><p>我曾经试图将图片传入到博客的github中，但发现每次将博客打包上传后，图片就会被新生成的博客文件覆盖掉，所以在这里我选择将头像图片传到QQ空间的私人相册，然后将图片的url直接写到配置中即可。</p>
+<h5 id="评论设置"><a href="#评论设置" class="headerlink" title="评论设置"></a>评论设置</h5><p>在yilia中已经集成了评论功能，目前支持多说和disqus，在这里我使用的是多说，多说配置很简单，登录多说，并且注册自己的博客信息，获取到多说的shortname，然后在主题的_config.yml中将</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">duoshuo: false</div></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">duoshuo: 你的shortname</div></pre></td></tr></table></figure>
+<p>这里好玩的是你可以将这里改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">duoshuo: true</div></pre></td></tr></table></figure>
+<p>然后查看自动生成的第一篇文章的评论，你会发现新大陆。</p>
+<h5 id="favicon设置"><a href="#favicon设置" class="headerlink" title="favicon设置"></a>favicon设置</h5><p>favicon设置的方法和头像设置一致就不重复了。</p>
+<h4 id="上传博客"><a href="#上传博客" class="headerlink" title="上传博客"></a>上传博客</h4><p>在经过一系列的配置后，我们终于可以查看效果了，首先在hexo的目录下打开控制台。<br>输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<p>然后打开博客，就可以看到效果啦。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/17/搭建属于自己博客/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -275,6 +363,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
